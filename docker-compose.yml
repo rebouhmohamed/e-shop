@@ -1,0 +1,18 @@
+version: '3.1'
+
+services:
+  database:
+    image: mysql:5.7
+    environment:
+     - MYSQL_ROOT_PASSWORD=securerootpassword
+     - MYSQL_DATABASE=e_shop
+     - MYSQL_USER=user
+     - MYSQL_PASSWORD=pass
+    ports:
+      - '3306:3306'
+
+  adminer:
+    image: adminer
+    restart: always
+    ports:
+      - 8080:8080
