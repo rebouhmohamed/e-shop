@@ -9,7 +9,7 @@ import { configuration } from './config/configuration';
     ConfigModule.forRoot({ 
       isGlobal: true,
       load: [configuration],
-      envFilePath: `dist/${process.env.NODE_ENV}.env` }),
+      envFilePath: `./${process.env.NODE_ENV}.env` }),
     TypeOrmModule.forRootAsync(typeOrmConfigAsync),
   ],
   controllers: [],
